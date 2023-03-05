@@ -27,8 +27,7 @@ export default {
     });
 
     async function getWeatherDetails() {
-      // const url = 'http://localhost/'
-      const url = 'http://127.0.0.1:8000/weather/' + props.user.id;
+      const url = 'http://localhost/weather/'+ props.user.id
       console.log(props.user.name)
 
       apiResponse.value = await (await fetch(url)).json();
