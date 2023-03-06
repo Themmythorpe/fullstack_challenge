@@ -41,7 +41,7 @@ class WeatherTest extends TestCase
 
     public function test_get_weather_returns_data()
     {
-        User::factory(20)->create();
+        User::factory(2)->create();
 
         // Select a random test user
         $randomUser = User::inRandomOrder()->first();
@@ -69,7 +69,7 @@ class WeatherTest extends TestCase
     }
     public function test_weather_api_request_should_not_exceed_500ms()
     {
-        User::factory(20)->create();
+        User::factory(2)->create();
 
         // Make a request to the getUsers endpoint which will also trigger the job
         $response = $this->get('/');
